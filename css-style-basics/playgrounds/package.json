@@ -1,0 +1,15 @@
+{
+  "name": "playgrounds",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
