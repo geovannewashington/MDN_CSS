@@ -1,4 +1,50 @@
 h1 {
     font-family: Ubuntu;
     color: red;
+    cursor: pointer;
+}
+
+p, 
+li {
+    color: blue;
+}
+
+.orange-span {
+    color: gold;
+}
+
+li em {
+    color: rebeccapurple;
+}
+
+h1 + p {
+    font-size: 200%;
+}
+
+.outer {
+    border: 5px solid black;
+    width: 250px;
+}
+
+.box {
+    padding: 0;
+    width: 50%;
+    background-color: red;
+}
+
+/* these are the so-called pseudo-classes */
+a:hover { /* mouse is over it */ 
+    font-size: 1.1em;
+}
+
+a:active { /* Currently being clicked */ 
+    color: red;
+}
+
+a:visited { /* Already visited link */
+    color: purple;
+}
+
+a:unvisited { /* Not visited yet */
+    color: blue;
 }
