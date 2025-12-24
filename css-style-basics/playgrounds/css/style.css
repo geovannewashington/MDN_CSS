@@ -1,50 +1,35 @@
-h1 {
-    font-family: Ubuntu;
-    color: red;
-    cursor: pointer;
-}
+/* The @import rule 
+ * We can import either locally (specifying the path) or from a remote source, that's how we import 
+ * Google Fonts for instance.
+ * */
+@import url("./toImport.css");
 
-p, 
-li {
-    color: blue;
-}
+body { background-color: pink; }
 
-.orange-span {
-    color: gold;
-}
-
-li em {
-    color: rebeccapurple;
-}
-
-h1 + p {
-    font-size: 200%;
-}
-
-.outer {
-    border: 5px solid black;
-    width: 250px;
+@media (width >= 30em) {
+    body { background-color: blue; }
 }
 
 .box {
-    padding: 0;
-    width: 50%;
-    background-color: red;
+    margin: 30px;
+    width:  100px;
+    height: 100px;
+    background-color: rebeccapurple;
+    transform: rotate(0.8turn);
+    
+    animation: 
+        colorchange 2s infinite,
+        pulse 0.5s infinite;
 }
 
-/* these are the so-called pseudo-classes */
-a:hover { /* mouse is over it */ 
-    font-size: 1.1em;
+@keyframes colorchange {
+    0%   { background-color: red; }
+    50%  { background-color: blue;}
+    100% { background-color: red; }
 }
 
-a:active { /* Currently being clicked */ 
-    color: red;
-}
-
-a:visited { /* Already visited link */
-    color: purple;
-}
-
-a:unvisited { /* Not visited yet */
-    color: blue;
+@keyframes pulse {
+    0%   { transform: scale(1);  }
+    50%  { transform: scale(1.2);}
+    100% { transform: scale(1);  }
 }
